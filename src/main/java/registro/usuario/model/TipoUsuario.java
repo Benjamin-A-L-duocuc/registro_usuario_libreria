@@ -1,0 +1,12 @@
+package registro.usuario.model;
+
+public enum TipoUsuario {
+	CLIENTE,
+	ADMINISTRADOR_GENERAL,
+	ADMINISTRADOR_DE_SISTEMA,
+	ADMINISTRADOR_BODEGAS_VENTAS,
+	GERENTE_SEDE,
+	LIBRERO,
+	CAJERO
+
+}
