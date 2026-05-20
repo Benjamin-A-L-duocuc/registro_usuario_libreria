@@ -1,6 +1,7 @@
 package registro.usuario.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,4 +21,11 @@ public class UsuarioService {
 	public Usuario agregarUsuario(Usuario usuario) {
 		return usuarioRepository.save(usuario);
 	}
+
+	public Optional<Usuario> getUsuarioId(Long id) {
+		return usuarioRepository.findById(id);
+	}
+
+	Usuario jona = new Usuario();
+
 }

@@ -32,9 +32,11 @@ public class Usuario {
 	@Column(nullable = false)
 	private String password;
 
-	private TipoUsuario tipoUsuario;
-
 	private Date fechaRegistro;
 
 	private boolean activo;
+
+	public String getNombreCompleto() {
+		return nombreCompleto;
+	}
 }

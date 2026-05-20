@@ -1,12 +1,24 @@
 package registro.usuario.model;
 
-public enum TipoUsuario {
-	CLIENTE,
-	ADMINISTRADOR_GENERAL,
-	ADMINISTRADOR_DE_SISTEMA,
-	ADMINISTRADOR_BODEGAS_VENTAS,
-	GERENTE_SEDE,
-	LIBRERO,
-	CAJERO
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "tipo_usuario")
+public class TipoUsuario {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String nombre;
 }
