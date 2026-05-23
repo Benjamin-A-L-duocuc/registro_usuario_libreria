@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,11 +34,19 @@ public class Usuario {
 	@Column(nullable = false)
 	private String password;
 
+	@ManyToOne
+	@JoinColumn(name = "id_tipo_usuario")
+	private TipoUsuario tipoUsuario;
+
 	private Date fechaRegistro;
 
 	private boolean activo;
 
 	public String getNombreCompleto() {
 		return nombreCompleto;
+	}
+
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		tipoUsuario = tipoUsuario;
 	}
 }

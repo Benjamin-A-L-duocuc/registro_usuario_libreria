@@ -21,4 +21,8 @@ public class TipoUsuario {
 	private Long id;
 
 	private String nombre;
+
+	public String getNombre() {
+		return nombre;
+	}
 }
