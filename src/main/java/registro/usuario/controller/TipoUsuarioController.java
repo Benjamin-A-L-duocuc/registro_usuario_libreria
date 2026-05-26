@@ -78,7 +78,6 @@ public class TipoUsuarioController {
 			return ResponseEntity
 					.status(404)
 					.body("tipo usuario no encontrado");
-
 		}
 		tipoUsuarioService.deleteTipoUsuario(id);
 		return ResponseEntity.ok("tipo usuario eliminado correctamente");
